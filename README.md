@@ -1,6 +1,6 @@
 # Harbordex Privacy Policy
 
-Published by R6T LABS LLC (R6TLabs). Last updated: November 13, 2026.
+Published by R6T LABS LLC (R6TLabs). Last updated: November 14, 2026.
 
 This policy covers Harbordex for Android, package `com.r6tlabs.harbordex`.
 
@@ -10,19 +10,17 @@ Harbordex is a companion to a Harbordex Device running on a computer or server y
 
 ## Content and connection information
 
-Depending on the features you use, the app transmits prompts, commands, review comments, selected files, photos or videos, and other content you submit to your connected Device. The Device can forward requests to the agents, model providers, source-control services, and other tools you have configured there. Connection and session identifiers are used to authenticate and operate the connection.
+Depending on the features you use, the app transmits prompts, commands, review comments, file-search queries, remote-browser URLs and interactions, selected files, photos or videos, optional credentials or secret-request responses, and other content you submit to your connected Device. The Device can forward requests to the agents, model providers, source-control services, and other tools you have configured there. Connection and session identifiers are used to authenticate and operate the connection.
 
 Pairing credentials and app preferences are stored on your phone. The app also keeps local state and cached content needed to display your workspace. Your connected Device stores its own project and conversation data. We do not receive that workspace content through a R6TLabs-hosted relay or analytics service as part of the standard direct-connection workflow.
 
-## Dictation and Google's on-device speech SDK
+## Optional dictation
 
-When you choose supported on-device dictation, Google's ML Kit speech-recognition API processes the audio on your phone. Google states that ML Kit does not send this input audio or the resulting transcript to its servers for that processing.
+The Android release being prepared for Google Play uses Android’s on-device speech-recognition API on supported Android 13+ devices. Harbordex supplies audio from your selected microphone to the on-device recognizer and does not fall back to a network recognizer. The Android speech service manages language-model availability and downloads under its own privacy controls and terms.
 
-ML Kit does send technical metrics to Google. These can include device and app information, user/device/installation identifiers, performance measurements, feature configuration and version, input/output sizes, feature events and errors, and configured languages. Google uses these for diagnostics and usage analytics, including operating and improving the APIs. These transfers use HTTPS. The SDK may also contact Google for models, updates, or device compatibility information.
+If you select transcription on a connected Device or through a cloud provider, the app requests your consent before sending audio to that destination. The destination and its configured provider handle that audio according to their own policies. Dictation is optional. Your keyboard’s voice typing is a separate operating-system feature.
 
-See [Google's ML Kit privacy information](https://developers.google.com/ml-kit/terms) and [Android data disclosures](https://developers.google.com/ml-kit/android-data-disclosure).
-
-If you instead select transcription on a connected Device or through a cloud provider, the app requests your consent before sending audio to that destination. The destination and its configured provider handle that audio according to their own policies. Dictation is optional.
+Earlier internal Android test builds used Google’s ML Kit GenAI speech SDK. That SDK processed input audio on the phone but sent technical metrics to Google, including device and app information, identifiers, performance, feature configuration and version, sizes, feature events and errors, and configured languages. Those SDK disclosures apply to those older test builds. See [Google’s ML Kit privacy information](https://developers.google.com/ml-kit/terms) and [Android data disclosures](https://developers.google.com/ml-kit/android-data-disclosure).
 
 ## Optional provider feedback
 
@@ -46,7 +44,7 @@ If you contact us for support, we receive the information you choose to send and
 
 ## Advertising, accounts, and children
 
-Harbordex does not include advertising or a R6TLabs app-account sign-up. The Google ML Kit metrics described above are separate from an advertising service. Your coding-agent and model subscriptions, if any, are managed with their providers.
+Harbordex does not include advertising or a R6TLabs app-account sign-up. Your coding-agent and model subscriptions, if any, are managed with their providers.
 
 Harbordex is designed for developer workflows and is not directed to children under 13.
 
