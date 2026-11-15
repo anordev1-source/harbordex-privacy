@@ -20,7 +20,13 @@ The Android release being prepared for Google Play uses Android’s on-device sp
 
 If you select transcription on a connected Device or through a cloud provider, the app requests your consent before sending audio to that destination. The destination and its configured provider handle that audio according to their own policies. Dictation is optional. Your keyboard’s voice typing is a separate operating-system feature.
 
-Earlier internal Android test builds used Google’s ML Kit GenAI speech SDK. That SDK processed input audio on the phone but sent technical metrics to Google, including device and app information, identifiers, performance, feature configuration and version, sizes, feature events and errors, and configured languages. Those SDK disclosures apply to those older test builds. See [Google’s ML Kit privacy information](https://developers.google.com/ml-kit/terms) and [Android data disclosures](https://developers.google.com/ml-kit/android-data-disclosure).
+Earlier internal Android test builds used Google’s ML Kit GenAI speech SDK rather than the platform speech API. That SDK processed audio on the phone and sent the technical metrics described below, including configured speech languages.
+
+## QR scanning and Google ML Kit metrics
+
+Camera and QR-scanning functionality includes Google’s ordinary ML Kit vision libraries. These are separate from the removed GenAI speech SDK. ML Kit processes scanning input on the phone. Its Android SDKs send technical information to Google for diagnostics and usage analytics, including device and app information, device or installation identifiers, performance measurements, API configuration, input/output sizes, feature versions, feature events and error codes. These metric transfers use HTTPS. Google states that it does not transfer this collected SDK data to third parties. Model downloads and related compatibility checks may also contact Google.
+
+See [Google’s ML Kit privacy information](https://developers.google.com/ml-kit/terms) and [Android data disclosures](https://developers.google.com/ml-kit/android-data-disclosure).
 
 ## Optional provider feedback
 
